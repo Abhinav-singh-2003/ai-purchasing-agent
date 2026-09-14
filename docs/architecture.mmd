@@ -1,0 +1,18 @@
+flowchart TD
+  UI[React Dashboard] --> API[Express API]
+  API --> AGENT[Agent Orchestrator]
+  AGENT --> T1[Inventory Tool]
+  AGENT --> T2[Forecast Tool]
+  AGENT --> T3[Purchase Order Tool]
+  AGENT --> T4[Supplier Tool]
+  AGENT --> T5[Constraint Tool]
+  T1 --> DATA[(Mock Operational Data)]
+  T2 --> DATA
+  T3 --> DATA
+  T4 --> DATA
+  T5 --> DATA
+  AGENT --> POLICY[Deterministic Decision Engine]
+  POLICY --> ACTION[Action Executor]
+  ACTION --> VALIDATE[Post-action Validation]
+  VALIDATE --> RESULT[Validated / Mismatch / Escalate]
+  AGENT -. optional explanation .-> LLM[LLM Provider]

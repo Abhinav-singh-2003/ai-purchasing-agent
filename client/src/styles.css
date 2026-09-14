@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: #f5f7fb;
+  color: #162033;
+}
+.page { max-width: 1180px; margin: 0 auto; padding: 40px 20px 80px; }
+.hero {
+  display: flex; justify-content: space-between; gap: 24px; align-items: flex-start;
+  margin-bottom: 24px;
+}
+.eyebrow { font-size: 12px; letter-spacing: .14em; font-weight: 800; }
+h1 { font-size: 44px; margin: 6px 0 10px; }
+h2 { margin-top: 0; }
+.hero p { max-width: 720px; line-height: 1.6; color: #596579; }
+.badge { background: #e9f7ef; color: #177245; padding: 10px 14px; border-radius: 999px; font-weight: 700; }
+.card {
+  background: white; border: 1px solid #e3e8f0; border-radius: 18px;
+  padding: 22px; box-shadow: 0 8px 30px rgba(28, 42, 65, .06);
+}
+.controls { display: grid; grid-template-columns: 1fr 1fr auto auto; gap: 16px; align-items: end; }
+label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 7px; }
+input, select {
+  width: 100%; padding: 12px; border: 1px solid #ccd4df; border-radius: 10px;
+  background: white; font-size: 15px;
+}
+button {
+  padding: 12px 18px; border: 0; border-radius: 10px; background: #172033; color: white;
+  font-weight: 800; cursor: pointer;
+}
+button.secondary { background: #eef1f6; color: #243044; }
+button:disabled { opacity: .6; cursor: wait; }
+.empty { margin-top: 20px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.grid.two { grid-template-columns: 1fr 1fr; }
+.metric span { display: block; color: #68758a; font-size: 13px; }
+.metric strong { display: block; font-size: 25px; margin-top: 8px; }
+.reason { line-height: 1.6; }
+.warning { color: #8a5a00; }
+.row { display: flex; justify-content: space-between; gap: 20px; padding: 11px 0; border-bottom: 1px solid #edf0f4; }
+@media (max-width: 800px) {
+  .hero, .controls { display: block; }
+  .controls > div, .controls button { margin-bottom: 12px; }
+  .grid, .grid.two { grid-template-columns: 1fr; }
+  h1 { font-size: 34px; }
+}
