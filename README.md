@@ -120,22 +120,4 @@ The LLM does **not** directly get permission to create arbitrary purchase orders
 
 This reduces hallucination risk for a workflow that can change inventory and spend money.
 
-## Interview summary
-
-Say:
-
-> "I designed the agent as a tool-using workflow rather than a chatbot. It first gathers the minimum operational facts, then a deterministic policy evaluates demand coverage, incoming POs, supplier constraints, budget and storage. The agent can accept, modify, reject or escalate. If it takes an action, the system re-reads the state and validates the expected result. If reality differs from the expected state, it does not silently continue; it flags a mismatch and escalates."
-
-## GitHub checklist
-
-Before submission:
-
-- [ ] public GitHub repository
-- [ ] source code
-- [ ] README
-- [ ] architecture diagram
-- [ ] `.env.example`
-- [ ] tests/evaluation scenarios
-- [ ] working demo
-- [ ] no secrets committed
-- [ ] meaningful commit history
+ 
